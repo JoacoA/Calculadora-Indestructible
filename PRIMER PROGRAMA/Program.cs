@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PRIMER_PROGRAMA     // CAMBIE TODO ESE COMENTARIO POR ESTA PARTE DE ACÁ, ESPERO FUNCIONE
+namespace PRIMER_PROGRAMA     // LISTO FUNCIONA
 
-    // HOLA TODO BIEN?
+   
 {
     class Program
     {

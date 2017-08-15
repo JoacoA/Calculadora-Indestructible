@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PRIMER_PROGRAMA     // CAMBIE TODO ESE COMENTARIO POR ESTA PARTE DE ACÁ, ESPERO FUNCIONE
 
-    // HOLA TODO BIEN? AHHHHHHHHHHHHHH
+    // HOLA TODO BIEN? AHHHHHHHHHHHHHHh
 {
     class Program
     {

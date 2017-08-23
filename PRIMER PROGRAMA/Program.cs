@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PRIMER_PROGRAMA     // LISTO FUNCIONA
+namespace PRIMER_PROGRAMA     
 
-   
+    // listo
 {
     class Program
     {

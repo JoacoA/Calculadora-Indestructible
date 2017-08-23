@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace PRIMER_PROGRAMA     
 
+<<<<<<< HEAD
     // listo
+=======
+    // HOLA TODO BIEN?
+    //AHORA LO CAMBIE ACA ..........
+>>>>>>> fc080d3efe04e80118faafece92d7c3f6f1cf16c
 {
     class Program
     {

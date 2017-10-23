@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace PRIMER_PROGRAMA     
 
-<<<<<<< HEAD
-    // listo
-=======
-    // HOLA TODO BIEN?
-    //AHORA LO CAMBIE ACA ..........
->>>>>>> fc080d3efe04e80118faafece92d7c3f6f1cf16c
+
 {
     class Program
     {
@@ -23,7 +18,7 @@ namespace PRIMER_PROGRAMA
             
             while (!salir)
             {
-                Console.WriteLine("--------------------------------");
+                Console.WriteLine("--------------------------------");      // MENÚ PRINCIPAL - Agregar funcionalidades
                 Console.WriteLine("1 - Sumar dos numeros");
                 Console.WriteLine("2 - Restar dos numeros");
                 Console.WriteLine("3 - Multiplicar dos numeros");
@@ -148,6 +143,11 @@ namespace PRIMER_PROGRAMA
                 return "NO ES UN PALÍNDROMO";
             }
         }
+        /// <summary>
+        /// Verifica que lo ingresado unicamente contenga números
+        /// </summary>
+        /// <param name="palabra"> String ingresado por el usuario a analizar </param>
+        /// <returns></returns>
         static bool AlfaChecker(string palabra)
         {
             int longitud = palabra.Length;
@@ -155,14 +155,13 @@ namespace PRIMER_PROGRAMA
             {
                 String ABC = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz";
                 if (ABC.Contains(palabra)){
-                    return false;
-                 
+                    return false;               
                 }
                 else
                 {
                     continue;
                 }
-                
+               
             }
             return true;
         }

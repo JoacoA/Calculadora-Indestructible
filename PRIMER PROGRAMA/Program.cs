@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace PRIMER_PROGRAMA     
 
@@ -25,6 +26,7 @@ namespace PRIMER_PROGRAMA
                 Console.WriteLine("4 - Divide dos numeros");
                 Console.WriteLine("5 - Salir");
                 Console.WriteLine("6 - Palindromo");
+                Console.WriteLine("7 - Ordenar una Lista");
                 String Opcion0 = Console.ReadLine();                               
                 int Opcion = Convert.ToInt32(Opcion0);
 
@@ -99,6 +101,27 @@ namespace PRIMER_PROGRAMA
                             Console.WriteLine("");
                             Console.WriteLine(Palindromo(analize));
                             break;
+                        case 7:
+                            Console.WriteLine("");
+                            Console.WriteLine("Escriba nombres, apellidos o lo que usted quiera. Cuando digite 'Salir' el programa le mostrará esa lista ordenada alfabéticamente");
+                            Console.WriteLine("");
+                            Console.WriteLine("Ingrese su primera palabra: ");
+                            String p = Console.ReadLine();
+                            ArrayList letras = new ArrayList();
+                            while(EsSalir(p) == false)
+                            {
+                                Console.WriteLine("Agregado! Ingrese otra palabra!");
+                                letras.Add(p);
+                                p = Console.ReadLine();
+                            }
+                            letras.Sort();
+                            string string2 = "";
+                            foreach (string i in letras)
+                            {                                
+                                string2 += i + ", ";
+                            }
+                            Console.WriteLine(Print(string2));                                                        
+                            break;                       
 
                         default:
                             Console.WriteLine("");
@@ -113,6 +136,19 @@ namespace PRIMER_PROGRAMA
 
             
         }
+        static string Print(string hola)
+        {
+            return hola;
+        }
+        static bool EsSalir(string palabra)
+        {
+            if(palabra == "Salir")
+            {
+                return true;
+            }
+            return false;
+
+        }
         static int Sumatoria(int numero,int numero2)
         {
             return numero + numero2;
@@ -121,14 +157,32 @@ namespace PRIMER_PROGRAMA
         {
             return numero - numero2;
         }
+        /// <summary>
+        /// Multiplica dos números enteros
+        /// </summary>
+        /// <param name="numero"> primer número </param>
+        /// <param name="numero2"> segundo número </param>
+        /// <returns></returns>
         static int Multiplicacion( int numero, int numero2)
         {
             return numero * numero2;
         }
+        /// <summary>
+        /// Divide dos números enteros
+        /// </summary>
+        /// <param name="numero"> Dividendo </param>
+        /// <param name="numero2"> Divisor </param>
+        /// <returns></returns>
         static int Division( int numero, int numero2)
         {
             return numero / numero2;
         }
+
+        /// <summary>
+        /// Verifica si un string en cuestión, es un palindromo o no
+        /// </summary>
+        /// <param name="palabra">String a verificar</param>
+        /// <returns></returns>
         static string Palindromo(string palabra)
         {
             int Longitud = palabra.Length;
@@ -153,7 +207,7 @@ namespace PRIMER_PROGRAMA
             int longitud = palabra.Length;
             for (int i = 0; i < longitud;i++)
             {
-                String ABC = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz";
+                String ABC = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz!@#·~$€%¬&/()?¿";
                 if (ABC.Contains(palabra)){
                     return false;               
                 }
